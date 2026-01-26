@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    font-family: "Outfit", sans-serif;
+}
+
+.grid-container {
+    text-align: center;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 25px;
+    background-color: rgb(94, 106, 213);
+}
+
+.controls-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: grid;
+    
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1rem;
+}
