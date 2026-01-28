@@ -15,11 +15,9 @@ if (timerElement) {
 
   setInterval(updateTimer, 1000);
 }
-
-const flipSound = new Audio('Sounds/flip.mp3');
-const correctSound = new Audio('Sounds/correct.mp3');
-const errorSound = new Audio('Sounds/error.mp3')
-
+const flipSnd = new Audio("./flip.mp3");
+const correctSnd = new Audio("./correct.mp3");
+const wrongSnd = new Audio("./wrong.mp3");
 
 var images = [
   "https://www.countryflags.com/wp-content/uploads/south-korea-flag-png-large.png",
@@ -55,7 +53,6 @@ function startGame() {
     card.innerHTML = '<div class="card-front"></div><div class="card-back"><img src="' + cardImages[i] + '"></div>';
     
     card.onclick = flipCard;
-    card.onclick = 
     card.dataset.image = cardImages[i];
     gameBoard.appendChild(card);
   }
@@ -72,6 +69,7 @@ function startGame() {
 }
 
 function flipCard() {
+  flipSnd.play();
   if (!canFlip) return;
 
   if (this.classList.contains("flipped")) return;
@@ -101,6 +99,7 @@ function checkMatch() {
     setTimeout(() => {
       firstCard.classList.add("matched");
       secondCard.classList.add("matched");
+      correctSnd.play();
       matches++;
       updateStats();
       resetCards();
@@ -110,6 +109,7 @@ function checkMatch() {
       }
     }, 500);
   }else {
+    wrongSnd.play();
     setTimeout(() => {
       firstCard.classList.remove("flipped");
       secondCard.classList.remove("flipped");
