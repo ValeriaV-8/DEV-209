@@ -15,6 +15,7 @@ if (timerElement) {
 
   setInterval(updateTimer, 1000);
 }
+<<<<<<< HEAD:scripts.js
 
 const flipSound = new Audio('.Sounds/flip.mp3')
 
@@ -150,3 +151,5 @@ function restart() {
 }
 
 startGame();
+=======
+>>>>>>> 64f5805cd650812b516a172b516965e336db81f3:Week-03/scripts.js
