@@ -16,19 +16,34 @@
                 <option value="hard">Hard (6x6)</option>
             </select>
             <div class="new-game">
-                <button onclick="restart()">New Game</button>
+                <button class="btn" onclick="restart()">New Game</button>
             </div>
         </div>
         <div class="count-container">
+            <p id="time-label">Time:</p>
             <div class="timer-container"></div>
             <div class="moves-container">
-                <p id="moves-counter">0</p>
+                <p>Moves: </p><p id="moves-label"></p>
+                <div class="moves-value" id="moves"></div>
             </div>
         </div>
-        <div class="card-container">
-            Hi
+        <div class="card-container" id="cardContainer"></div>
+            
+        <div class="gamewin" id="winGame">
+            <div class="gamewin-content">
+                <h1>You Win!</h1>
+                <p>Moves: <span id="totalMoves">0</span></p>
+                <button class="btn" onclick="newGame()">New Game</button>
+            </div>
         </div>
     </div>
-    <script src="simple.js"></script>
+
+    <audio>
+        <source src="click.ogg">
+        <source src="click.mp3">
+    </audio>
+
+
+    <script src="scripts.js"></script>
 </body>
 </html>
