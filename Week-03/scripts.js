@@ -15,9 +15,10 @@ if (timerElement) {
 
   setInterval(updateTimer, 1000);
 }
-<<<<<<< HEAD:scripts.js
 
-const flipSound = new Audio('.Sounds/flip.mp3')
+const flipSound = new Audio('Sounds/flip.mp3');
+const correctSound = new Audio('Sounds/correct.mp3');
+const errorSound = new Audio('Sounds/error.mp3')
 
 
 var images = [
@@ -151,5 +152,3 @@ function restart() {
 }
 
 startGame();
-=======
->>>>>>> 64f5805cd650812b516a172b516965e336db81f3:Week-03/scripts.js
