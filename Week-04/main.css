@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(203 213 225);
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid white;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 25px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#listloginTitle {
+    font-size: 1.5rem;
+    background-color:aliceblue;
+}
+
+#todoList {
+    padding: 0;
+    width: 100%
+}
+
+#todoList li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    list-style: none;
+    padding: 15px;    
+    background: #fff;
+    border: 3px solid black;    
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;    
+}
+
+.todo-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.todo-content strong {
+    display: block;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.todo-content strong,
+.todo-content p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+li .completed + .desc-text {
+    text-decoration: line-through;
+}
+
+.desc-text {
+    text-align: left;
+}

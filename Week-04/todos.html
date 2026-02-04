@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">    
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <div class="list-input">
+            <input type="text" id="todoInput" placeholder="Task Title">
+            <input type="text" id="todoDesc" placeholder="Task Description">
+            <button onclick="addTodo()">Add Task</button>
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+    <div class="container" id="logout">    
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+<script src="scripts.js"></script>
+</body>
+</html>
