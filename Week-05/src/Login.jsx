@@ -32,5 +32,4 @@ function Password() {
     return password;
 }
 
-export default Login;
-export { Username, Password };
+export { Login, Username, Password };

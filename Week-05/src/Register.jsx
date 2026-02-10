@@ -30,5 +30,4 @@ function RegisterPassword() {
     return registerPassword;
 }
 
-export default Register;
-export { RegisterUsername, RegisterPassword };
+export { Register, RegisterUsername, RegisterPassword };
