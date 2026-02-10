@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Header.jsx'
 import Login, { Username, Password } from './Login.jsx'
+import Register, { RegisterUsername, RegisterPassword } from './Register.jsx'
 
 function App() {
 
@@ -11,11 +12,12 @@ function App() {
       <div className="container"> 
         <Login />
         <Username />
-        <br/>
         <Password />
       </div>
       <div className="container">
-        
+        <Register />
+        <RegisterUsername />
+        <RegisterPassword />
       </div>
     </>
   )
