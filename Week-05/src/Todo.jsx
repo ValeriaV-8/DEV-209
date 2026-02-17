@@ -68,39 +68,43 @@ function ToDo() {
             </div>
             
             <div className="container">
-                <ul>
-                    {todos.map((todo) => (
-                        <li key={todo.id}>
-                            {editingId === todo.id ? (
-                                <>
-                                    <input
-                                        value={editTitle}
-                                        onChange={(e) => setEditTitle(e.target.value)}
-                                    />
-                                    <input 
-                                        value={editDesc}
-                                        onChange={(e) => setEditDesc(e.target.value)}
-                                    />
-                                    <button onClick={() => saveEdit(todo.id)}>Save Changes</button>
-                                </>    
-                            ) : (
-                                <>
-                                    <div style={{
-                                        textDecoration: todo.isCompleted ? 'line-through' : 'none'
-                                    }}>
-                                        <strong>{todo.title}</strong>
-                                        <p>{todo.desc}</p>
-                                    </div>
-                                    <button onClick={() => toggleComplete(todo.id)}>
-                                        {todo.isCompleted ? 'Undo' : 'Complete'}
-                                    </button>
-                                    <button onClick={() => startEdit(todo)}>Edit</button>
-                                    <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-                                </>
-                            )}
-                        </li>
-                    ))}
-                </ul>
+                {todos.length > 0 ? (
+                    <ul>
+                        {todos.map((todo) => (
+                            <li key={todo.id}>
+                                {editingId === todo.id ? (
+                                    <>
+                                        <input
+                                            value={editTitle}
+                                            onChange={(e) => setEditTitle(e.target.value)}
+                                        />
+                                        <input 
+                                            value={editDesc}
+                                            onChange={(e) => setEditDesc(e.target.value)}
+                                        />
+                                        <button onClick={() => saveEdit(todo.id)}>Save Changes</button>
+                                    </>    
+                                ) : (
+                                    <>
+                                        <div style={{
+                                            textDecoration: todo.isCompleted ? 'line-through' : 'none'
+                                        }}>
+                                            <strong>{todo.title}</strong>
+                                            <p>{todo.desc}</p>
+                                        </div>
+                                        <button onClick={() => toggleComplete(todo.id)}>
+                                            {todo.isCompleted ? 'Undo' : 'Complete'}
+                                        </button>
+                                        <button onClick={() => startEdit(todo)}>Edit</button>
+                                        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                                    </>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>Your list is empty.</p>
+                )}
             </div>
         </div>
     );

@@ -9,15 +9,19 @@ import ToDo from './Todo.jsx'
 
 
 function App() {
- 
+  // Sets so the default is user is not logged in
+  // and the page shows the login/register page
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // Prevents the page from reloading on 'login'
+  // and shows the to do list page
   const handleLogin = (e) => {
     e.preventDefault();
     setIsLoggedIn(true);
   };
  
   return (
+    // To Do List page
     <div className="App">
       {isLoggedIn ? (
         <>
@@ -25,6 +29,7 @@ function App() {
           <button onClick={() => setIsLoggedIn(false)}>Logout</button>
         </>
       ) : (
+        // Login/Register Page
         <>
         <LoginHeader />
           <div className="container"> 
