@@ -26,6 +26,7 @@ function App() {
       {isLoggedIn ? (
         <>
           <ToDo />
+          {/*Sends the user back to the login/register page*/}
           <button onClick={() => setIsLoggedIn(false)}>Logout</button>
         </>
       ) : (
@@ -36,6 +37,7 @@ function App() {
             <Login />
             <Username />
             <Password />
+            {/*Sends the user to the to do list page*/}
             <button onClick={handleLogin}>Login</button>
           </div>
           <div className="container">

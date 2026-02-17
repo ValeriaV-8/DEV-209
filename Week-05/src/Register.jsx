@@ -1,9 +1,11 @@
+// Register header
 const register = (
     <div className = "register">
         <h2>Register</h2>
     </div>
 )
 
+// Registering username form
 const registerUsername = (
     <form className = "registerForm">
         <label>Username: </label>
@@ -11,6 +13,7 @@ const registerUsername = (
     </form>
 )    
 
+// Registering password form
 const registerPassword = (
     <form className = "registerForm">
         <label>Password: </label>

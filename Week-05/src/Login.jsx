@@ -1,9 +1,11 @@
+// Login Header
 const login = (
     <div className = "login">
         <h2>Login</h2>
     </div>
 );
 
+// Username form
 const username = (
     <form className = "loginForm">
         <label>Username: </label>
@@ -12,6 +14,7 @@ const username = (
     </form>
 ) 
 
+// Password form
 const password = (
     <form className = "loginForm">
         <label>Password: </label>
