@@ -1,11 +1,21 @@
-const header = (
+const loginheader = (
     <header className="header">
         <h1>To Do List Login</h1>
     </header>
 );
 
-function Header() {
-    return header;
-}
+const todoheader = (
+    <header className="header">
+        <h1>To Do List</h1>
+    </header>
+);
 
-export default Header;
+function LoginHeader() {
+    return loginheader;
+};
+
+function TodoHeader() {
+    return todoheader;
+};
+
+export {  LoginHeader, TodoHeader  };
