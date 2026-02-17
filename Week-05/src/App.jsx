@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import { LoginHeader, TodoHeader } from './Header.jsx'
+import { LoginHeader } from './Header.jsx'
 import { Login, Username, Password } from './Login.jsx'
 import { Register, RegisterUsername, RegisterPassword } from './Register.jsx'
 import { RegisterButton } from './Button.jsx'
+import ToDo from './Todo.jsx'
 
 
 
@@ -20,12 +21,7 @@ function App() {
     <div className="App">
       {isLoggedIn ? (
         <>
-          <TodoHeader />
-          <h1>My To Do List</h1>
-          <ul>
-            <li>Hi</li>
-            <li>Lo</li>
-          </ul>
+          <ToDo />
           <button onClick={() => setIsLoggedIn(false)}>Logout</button>
         </>
       ) : (
