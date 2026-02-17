@@ -25,7 +25,9 @@ function App() {
         <>
           <ToDo />
           {/*Sends the user back to the login/register page*/}
-          <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+          <div className="logout-container">
+            <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+          </div>
         </>
       ) : (
         // Login/Register Page
