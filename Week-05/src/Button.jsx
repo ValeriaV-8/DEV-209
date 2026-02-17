@@ -1,15 +1,5 @@
-const loginBtn = () => {
-    alert('You clicked the login button!')
-};
-
 const registerBtn = () => {
-    alert('You clicked the register button!')
-};
-
-function LoginButton() {
-    return (
-        <button onClick={loginBtn}>Login</button>
-    )
+    alert('Registeration Success!')
 };
 
 function RegisterButton() {
@@ -18,4 +8,4 @@ function RegisterButton() {
     )
 };
 
-export { LoginButton, RegisterButton };
+export {  RegisterButton };
