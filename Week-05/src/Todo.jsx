@@ -94,7 +94,7 @@ function ToDo() {
             </div>
             
             {/*Shows the list*/}
-            <div className="container">
+            <div className="task-container">
                 {/*Shows the to do list if there are any. If not, shows the empty message*/}
                 {todos.length > 0 ? (
                     <ul>

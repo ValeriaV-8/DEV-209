@@ -6,8 +6,6 @@ import { Register, RegisterUsername, RegisterPassword } from './Register.jsx'
 import { RegisterButton } from './Button.jsx'
 import ToDo from './Todo.jsx'
 
-
-
 function App() {
   // Sets so the default is user is not logged in
   // and the page shows the login/register page
